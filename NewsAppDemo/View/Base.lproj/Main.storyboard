@@ -10,33 +10,50 @@
         <!--Top Egypt News-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="NewsAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="NewsAppDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GbI-rs-baf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N6F-3D-JFJ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GbI-rs-baf" secondAttribute="bottom" id="BfO-Wo-dAV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GbI-rs-baf" secondAttribute="trailing" id="gg0-wU-jsh"/>
-                            <constraint firstItem="GbI-rs-baf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sYZ-Jf-HbT"/>
-                            <constraint firstItem="GbI-rs-baf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yxQ-iu-9AA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N6F-3D-JFJ" secondAttribute="trailing" id="A1l-ga-IIc"/>
+                            <constraint firstItem="N6F-3D-JFJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GpH-Cm-wnG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N6F-3D-JFJ" secondAttribute="bottom" id="IcA-9j-Igi"/>
+                            <constraint firstItem="N6F-3D-JFJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pdb-2j-9SF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Top Egypt News" id="Lhc-w9-HaR"/>
                     <connections>
-                        <outlet property="tableView" destination="GbI-rs-baf" id="U1d-3E-bKl"/>
+                        <outlet property="newsTableView" destination="N6F-3D-JFJ" id="5Kf-yd-wwt"/>
+                        <segue destination="XJH-za-2Vd" kind="show" identifier="detailsSegue" id="DHv-4z-ZFp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+        </scene>
+        <!--SafariVC-->
+        <scene sceneID="NDN-GR-Lzm">
+            <objects>
+                <viewController id="XJH-za-2Vd" customClass="SafariVC" customModule="NewsAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iIG-aj-22O">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dDn-4f-ShT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XnT-EC-QRw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Q9-TH-8gu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016" y="116"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="elT-DV-3gw">

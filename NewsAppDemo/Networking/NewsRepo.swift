@@ -15,7 +15,7 @@ class NewsRepo {
     
     typealias completionHanlder = (_  response : HeadLineModel?) -> Void
     func getHeadLines(completion : @escaping completionHanlder) {
-        networkManager.performRequest(.loadHeadLines(country: "eg", apiKey: "241380e680fd457ca28ec918ee92e1b8"), completion: completion)
+        networkManager.performRequest(.loadHeadLines(country: "eg", apiKey: "241380e680fd457ca28ec918ee92e1b8",pageNumber: 1), completion: completion)
     }
     
 }

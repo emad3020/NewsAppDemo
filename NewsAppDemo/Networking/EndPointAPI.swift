@@ -16,7 +16,7 @@ enum NetworkEnvironment{
 
 
 enum EndPointAPI{
-    case loadHeadLines(country: String, apiKey : String)
+    case loadHeadLines(country: String, apiKey : String, pageNumber : Int)
 }
 
 
@@ -56,8 +56,8 @@ extension EndPointAPI : TargetType {
     
     public var task: Task {
         switch self {
-        case .loadHeadLines(let country, let apiKey):
-            let paramter = ["country" : country, "apiKey" : apiKey]
+        case .loadHeadLines(let country, let apiKey, let index):
+            let paramter : [String : Any] = ["country" : country, "apiKey" : apiKey, "pageSize" : 50, "page" : index]
             return .requestParameters(parameters: paramter, encoding: URLEncoding.default)
         }
     }
